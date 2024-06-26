@@ -10,17 +10,22 @@ import cd.zgeniuscoders.bluethooth.models.Device
 
 class DeviceAdapter(private val context: Context,private val devicesList: List<Device>): Adapter<DeviceAdapter.DeviceViewHolder>() {
 
-    inner class DeviceViewHolder(private val binding: ItemDeviceBinding): ViewHolder(binding.root)
+    inner class DeviceViewHolder(itemDeviceBinding: ItemDeviceBinding) :
+        ViewHolder(itemDeviceBinding.root) {
+        val binding = ItemDeviceBinding.bind(itemDeviceBinding.root)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DeviceViewHolder {
         return DeviceViewHolder(
-            ItemDeviceBinding.inflate(LayoutInflater.from(context)))
+            ItemDeviceBinding.inflate(LayoutInflater.from(context), parent, false)
+        )
     }
 
     override fun getItemCount(): Int = devicesList.size
 
     override fun onBindViewHolder(holder: DeviceViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val device = devicesList[position]
+        holder.binding.deviceName.text = device.name
     }
 
 }

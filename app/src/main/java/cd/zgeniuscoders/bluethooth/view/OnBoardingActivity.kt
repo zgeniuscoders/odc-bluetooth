@@ -1,6 +1,7 @@
 package cd.zgeniuscoders.bluethooth.view
 
 import android.animation.ObjectAnimator
+import android.content.Intent
 import android.os.Bundle
 import android.view.animation.DecelerateInterpolator
 import androidx.activity.enableEdgeToEdge
@@ -45,6 +46,8 @@ class OnBoardingActivity : AppCompatActivity(), OnBoardingProgressInterface {
     }
 
     override fun endAnimation() {
-        TODO("Not yet implemented")
+        Intent(this@OnBoardingActivity, MainActivity::class.java).apply {
+            startActivity(this)
+        }
     }
 }

@@ -35,9 +35,9 @@ open class OnBoardingWelcomeFragment : Fragment() {
         binding = FragmentOnBoardingWelcomeBinding.inflate(layoutInflater)
 
         binding.nextBtn.setOnClickListener {
-            mListener!!.endAnimation()
-            findNavController().navigate(R.id.action_onBoardingWelcomeFragment_to_onBoardingPresentFragment)
+            mListener!!.calcProgressValue(2)
 
+            findNavController().navigate(R.id.action_onBoardingWelcomeFragment_to_onBoardingPresentFragment)
         }
 
         return binding.root

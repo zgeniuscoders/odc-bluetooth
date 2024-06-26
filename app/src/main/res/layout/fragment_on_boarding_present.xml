@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="26dp"
-        android:text="Bienvenu sur mon app"/>
+        android:text="Bienvenu sur mon app djhdjhdh"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/next_btn"

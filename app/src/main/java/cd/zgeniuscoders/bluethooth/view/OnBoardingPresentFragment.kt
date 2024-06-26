@@ -35,9 +35,7 @@ class OnBoardingPresentFragment : Fragment() {
 
         binding.nextBtn.setOnClickListener {
 
-            mListener!!.calcProgressValue(2)
-
-            findNavController().navigate(R.id.action_onBoardingWelcomeFragment_to_onBoardingPresentFragment)
+            mListener!!.endAnimation()
 
         }
 
