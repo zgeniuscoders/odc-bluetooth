@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding_nav"
+    app:startDestination="@id/onBoardingWelcomeFragment">
+
+    <fragment
+        android:id="@+id/onBoardingWelcomeFragment"
+        android:name="cd.zgeniuscoders.bluethooth.view.OnBoardingWelcomeFragment"
+        android:label="fragment_on_boarding_welcome"
+        tools:layout="@layout/fragment_on_boarding_welcome" >
+        <action
+            android:id="@+id/action_onBoardingWelcomeFragment_to_onBoardingPresentFragment"
+            app:destination="@id/onBoardingPresentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingPresentFragment"
+        android:name="cd.zgeniuscoders.bluethooth.view.onBoardingPresentFragment"
+        android:label="fragment_on_boarding_present"
+        tools:layout="@layout/fragment_on_boarding_present" />
+</navigation>

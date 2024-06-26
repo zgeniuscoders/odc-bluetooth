@@ -26,6 +26,9 @@ android {
             )
         }
     }
+    buildFeatures{
+        viewBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -37,6 +40,7 @@ android {
 
 dependencies {
 
+    implementation(libs.androidx.navigation.fragment)
     val lifecycle_version = "2.7.0"
 
     implementation(libs.androidx.core.ktx)
